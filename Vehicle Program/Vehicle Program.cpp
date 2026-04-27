@@ -1,5 +1,7 @@
-// Vehicle Program.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Jonah Meoak
+// CIS 1202 M01
+// April 26 2026
+// Vehicle Program with Inheritance for car and truck classes that doesn't actually do anything
 
 #include <iostream>
 #include <string>
@@ -14,6 +16,8 @@ using namespace std;
 
 int main()
 {
+	cout << "Vehicle Program\n";
+
 	int year;
 	string manufacturer;
 	cout << "\nVehicle:\n";
@@ -23,6 +27,30 @@ int main()
 	year = getGenericNumInput<int>();
 	Vehicle v(manufacturer, year);
 	v.displayInfo();
+
+	cout << "\nCar:\n";
+	cout << "Enter the manufacturer: ";
+	cin.ignore();
+	getline(cin, manufacturer);
+	cout << "Enter the year built: ";
+	year = getGenericNumInput<int>();
+	int doors;
+	cout << "Enter the number of doors: ";
+	doors = getGenericNumInput<int>();
+	Car c(manufacturer, year, doors);
+	c.displayInfo();
+
+	cout << "\nTruck:\n";
+	cout << "Enter the manufacturer: ";
+	cin.ignore();
+	getline(cin, manufacturer);
+	cout << "Enter the year built: ";
+	year = getGenericNumInput<int>();
+	double cargoCapacity;
+	cout << "Enter the cargo capacity: ";
+	cargoCapacity = getGenericNumInput<double>();
+	Truck t(manufacturer, year, cargoCapacity);
+	t.displayInfo();
 
 }
 
