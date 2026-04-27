@@ -29,7 +29,7 @@ void Vehicle::setYear(int year)
 
 void Vehicle::displayInfo() const
 {
-	cout << "\nVehicle Information:\n";
+	cout << "Vehicle Information:\n";
 	cout << "Manufacturer: " << manufacturer << endl;
 	cout << "Year Built: " << year << endl;
 }
